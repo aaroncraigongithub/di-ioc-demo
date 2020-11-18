@@ -2,13 +2,20 @@ import tokenize from '.';
 import { Processor } from './interfaces';
 import deduper from './processors/deduper';
 import lowercase from './processors/lowercase';
+import punctuationRemover from './processors/punctuationRemover';
 import stemmer from './processors/stemmer';
 import stopwords from './processors/stopwords';
 import whitespace from './tokenizers/whitespace';
 
 describe('tokenize', () => {
   const input = 'The skier skis down the ski slope.';
-  const pipeline: Processor[] = [lowercase, stopwords, stemmer, deduper];
+  const pipeline: Processor[] = [
+    lowercase,
+    stopwords,
+    stemmer,
+    punctuationRemover,
+    deduper,
+  ];
 
   let tokens: string[];
 

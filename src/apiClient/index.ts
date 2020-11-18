@@ -1,3 +1,4 @@
+import HttpTransport from './transports/http';
 import { ApiTransport } from './transports/interfaces';
 
 export interface User {

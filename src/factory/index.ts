@@ -20,3 +20,23 @@ export default function processorFactory(type: ProcessorType): Processor {
 
   return processors[type];
 }
+
+export function getAppropriateProcessor(input: string): Processor | undefined {
+  if (/[A-Z]/.test(input)) {
+    return lowercase;
+  }
+
+  if (/[A-Z]/.test(input)) {
+    return lowercase;
+  }
+
+  if (/[A-Z]/.test(input)) {
+    return lowercase;
+  }
+
+  if (/[A-Z]/.test(input)) {
+    return lowercase;
+  }
+
+  return undefined;
+}
